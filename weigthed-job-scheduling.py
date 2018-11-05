@@ -1,3 +1,4 @@
+# Python program for weighted job scheduling using Dynamic 
 
 class Job: 
     def __init__(self, start, finish, profit): 
@@ -53,8 +54,18 @@ def schedule(job):
 
     return table[n-1] 
 
-# Driver code to test above function 
-job = [Job(1, 2, 50), Job(3, 5, 20), 
-    Job(6, 19, 100), Job(2, 100, 200)] 
-print("Optimal profit is"), 
-print schedule(job) 
+n = input('Digite o numero de trabalhos: ')
+i = 0
+
+job = []
+
+while(i != n):
+    start_job1 = int(input('Inicio da tarefa: ' ))
+    final_job1 = int(input('Final da tarefa: '))
+    lucro_job1 = int(input('Valor da tarefa: '))
+
+    job.append(Job(start_job1, final_job1, lucro_job1))
+    i = i+1
+
+print("Melhor lucro sera: "),
+print schedule(job)
