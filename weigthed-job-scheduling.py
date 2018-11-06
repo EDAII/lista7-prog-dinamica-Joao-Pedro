@@ -60,9 +60,9 @@ i = 0
 job = []
 
 while(i != n):
-    start_job1 = int(input('Inicio da tarefa: ' ))
-    final_job1 = int(input('Final da tarefa: '))
-    lucro_job1 = int(input('Valor da tarefa: '))
+    start_job1 = int(input('Inicio da tarefa %d: ' % (i + 1)))
+    final_job1 = int(input('Final da tarefa %d: ' %(i + 1)))
+    lucro_job1 = int(input('Valor da tarefa %d:' %(i + 1)))
 
     job.append(Job(start_job1, final_job1, lucro_job1))
     i = i+1
